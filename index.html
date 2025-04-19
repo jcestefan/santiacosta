@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santi Acosta</title>
+  <script src="https://kit.fontawesome.com/b111190d83.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .nav-link {
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:active {
+      transform: scale(0.95);
+      color: #0760c3;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-black/50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center">
+        <img src="santi-acosta-logo-horizontal.svg" alt="Logo Santi Acosta" class="h-10 w-auto">
+      </div>
+      <button id="menu-btn" class="text-white text-2xl md:hidden">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="menu" class="hidden md:flex space-x-6">
+        <a href="#intro" class="nav-link hover:text-[#0760c3] transition">Inicio</a>
+        <a href="#about" class="nav-link hover:text-[#0760c3] transition">Acerca de mí</a>
+        <a href="#services" class="nav-link hover:text-[#0760c3] transition">Servicios</a>
+        <a href="#videos" class="nav-link hover:text-[#0760c3] transition">Videos</a>
+        <a href="#gallery" class="nav-link hover:text-[#0760c3] transition">Galería</a>
+        <a href="#contact" class="nav-link hover:text-[#0760c3] transition">Contacto</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-black text-white px-4">
+      <a href="#intro" class="nav-link py-2 border-b border-gray-700">Inicio</a>
+      <a href="#about" class="nav-link py-2 border-b border-gray-700">Acerca de mí</a>
+      <a href="#services" class="nav-link py-2 border-b border-gray-700">Servicios</a>
+      <a href="#videos" class="nav-link py-2 border-b border-gray-700">Videos</a>
+      <a href="#gallery" class="nav-link py-2 border-b border-gray-700">Galería</a>
+      <a href="#contact" class="nav-link py-2">Contacto</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- Intro con imagen de fondo -->
+    <section id="intro" class="relative h-screen flex items-center justify-center text-center text-white animate-on-scroll bg-cover bg-center" style="background-image: url('santi-fondo.jpg');">
+      <!-- Overlay oscuro -->
+      <div class="absolute inset-0 bg-black/90 z-0"></div>
+
+      <!-- Contenido -->
+      <div class="relative z-10">
+       <img src="santi-acosta-logo.svg" alt="Logo Santi Acosta" class="mx-auto mb-6 shadow-xl w-64">
+        <p class="text-lg text-gray-300">Compositor | Violinista | Canto | Eventos</p>
+      </div>
+    </section>
+
+    <!-- Acerca de mí -->
+    <section id="about" class="py-20 px-6 bg-black animate-on-scroll">
+      <h2 class="text-3xl font-bold text-[#0760c3] text-center mb-12">Acerca de mí</h2>
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-shrink-0">
+        <img src="santi.jpg" alt="Santi Acosta" class="rounded-full w-48 h-48 object-cover shadow-lg">
+        </div>
+        <div class="text-gray-300 text-center md:text-left">
+        <p class="mb-4">Soy Santi Acosta, Licenciado en Música con Énfasis en Composición.</p>
+        <ul class="list-disc list-inside space-y-2">
+            <li>Tengo más de 15 años de experiencia en composición y producción musical y realización de eventos musicales en vivo a nivel nacional e internacional.</li>
+            <li>Soy multi-instrumentista con especial habilidad en violín, piano, guitarra y canto.</li>
+            <li>Versatilidad en géneros musicales como ranchera, rock, pop, guasca, clásica, entre otros.</li>
+          </ul>
+        <p class="mt-4">Me apasiona crear experiencias que permitan conectar mi arte con la audencia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="py-20 px-6 bg-[#0a0a0a] text-center animate-on-scroll">
+      <h2 class="text-3xl font-bold text-[#0760c3] mb-12">Servicios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-black/60 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <i class="fas fa-microphone text-4xl text-[#0760c3] mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Shows en Vivo</h3>
+          <p class="text-gray-400">Actuaciones para todo tipo de eventos: Cumpleaños, misas, bodas, exequias, aniversarios, entre otros</p>
+        </div>
+        <div class="bg-black/60 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <i class="fas fa-music text-4xl text-[#0760c3] mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Composición y Producción Musical</h3>
+          <p class="text-gray-400">Composición, producción y/o apoyo en elaboración de piezas musicales</p>
+        </div>
+        <div class="bg-black/60 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <i class="fas fa-headphones text-4xl text-[#0760c3] mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Amenización en restaurantes y bares</h3>
+          <p class="text-gray-400">Acompañamiento musical en lugares de entretenimiento y gastronómicos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="py-20 px-6 bg-black text-center animate-on-scroll">
+      <h2 class="text-3xl font-bold text-[#0760c3] mb-12">Videos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <iframe class="w-full aspect-video rounded-xl shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
+        <iframe class="w-full aspect-video rounded-xl shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="py-20 px-6 bg-[#0a0a0a] text-center animate-on-scroll">
+      <h2 class="text-3xl font-bold text-[#0760c3] mb-12">Galería</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <a href="galeria1.jpg" target="_blank">
+          <img src="galeria1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition-transform" alt="Galería 1">
+        </a>
+        <a href="galeria2.jpg" target="_blank">
+          <img src="galeria2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition-transform" alt="Galería 2">
+        </a>
+        <a href="galeria3.jpg" target="_blank">
+          <img src="galeria3.jpg" class="rounded-xl shadow-lg hover:scale-105 transition-transform" alt="Galería 3">
+        </a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="py-20 px-6 bg-[#0a0a0a] text-white animate-on-scroll">
+        <h2 class="text-3xl font-bold text-[#0760c3] mb-12 text-center">Contacto</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div class="text-gray-300 text-lg">
+            <p>¿Quieres saber más de mí o realizar un evento? <br>Conéctate en redes sociales o escríbeme directamente por WhatsApp.</p>
+          </div>
+          <div class="flex flex-col items-center md:items-start gap-4 text-2xl">
+            <a href="https://instagram.com/santiacostamusik" target="_blank" class="text-pink-500 hover:scale-110 transition-transform">
+              <i class="fab fa-instagram mr-2"></i>@santiacostamusik
+            </a>
+            <a href="https://wa.me/573012926689" target="_blank" class="text-green-500 hover:scale-110 transition-transform">
+              <i class="fab fa-whatsapp mr-2"></i>+57 3012926689
+            </a>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <script>
+    // Menú hamburguesa
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+     // Ocultar menú al hacer clic en un enlace
+     document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>
